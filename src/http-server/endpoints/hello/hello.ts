@@ -12,7 +12,7 @@ import { api } from "encore.dev/api";
 //
 //	curl http://localhost:4000/hello/World
 //
-export const get = api(
+export const hello = api(
   { expose: true, method: "GET", path: "/hello/:name" },
   async ({ name }: { name: string }): Promise<Response> => {
     const msg = `Hello ${name}!`;
