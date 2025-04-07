@@ -6,15 +6,29 @@
   "license": "MPL-2.0",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "type-check": "tsc --noEmit",
+    "lint": "biome lint --error-on-warnings ./src",
+    "format": "biome format ./src ./test --fix",
+    "clean": "biome check ./src ./test --write"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^20.5.7",
+    "@types/pg": "^8.11.11",
+    "biome": "^0.3.3",
+    "drizzle-kit": "^0.30.6",
     "typescript": "^5.2.2",
     "vitest": "^1.5.0"
   },
   "dependencies": {
-    "encore.dev": "^1.46.16"
+    "@mysten/sui": "^1.26.1",
+    "drizzle-orm": "^0.41.0",
+    "drizzle-zod": "^0.7.1",
+    "encore.dev": "^1.46.16",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.14.1",
+    "zod": "^3.24.2"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.13.0"
